@@ -5,12 +5,12 @@ import PrimaryBtn from '../../components/PrimaryBtn';
 const Home = () => {
     return (
         <div className='my-24'>
-            <section className="flex items-center flex-1">
+            <section className="flex items-center ">
                 <div className="flex flex-col w-full ">
                 <p className="max-w-3xl mx-auto mb-6 font-bold text-lg text-center text-sky-700 dark:text-white md:text-xl">
                        Welcome to ...
                     </p>
-                    <h1 className="text-5xl font-extrabold text-center lg:text-7xl 2xl:text-8xl">
+                    <h1 className="text-4xl font-extrabold text-center lg:text-7xl 2xl:text-8xl">
                         <span className="text-transparent bg-gradient-to-br bg-clip-text from-teal-500 via-indigo-500 to-sky-500 dark:from-teal-200 dark:via-indigo-300 dark:to-sky-500">
                             My Task
                         </span>
@@ -25,8 +25,8 @@ const Home = () => {
                         consectetur adipisicing elit. Fugit alias nihil incidunt.
                     </p>
 
-                    <div className="flex flex-col mt-8 space-y-3 sm:-mx-2 sm:flex-row sm:justify-center sm:space-y-0">
-                        <Link to= '/addTask'><PrimaryBtn>details</PrimaryBtn></Link>
+                    <div className=" mt-8 text-center ">
+                        <Link to= '/addTask'><PrimaryBtn>Let's add some Task</PrimaryBtn></Link>
                     </div>
                 </div>
             </section>
