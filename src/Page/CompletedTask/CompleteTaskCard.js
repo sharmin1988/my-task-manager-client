@@ -1,9 +1,9 @@
 import React from 'react';
 import PrimaryBtn from '../../components/PrimaryBtn';
 
-const MyTaskCard = ({ task, handelDelete, handelComplete }) => {
+const CompleteTaskCard = ({ task, handelDelete, handelNotComplete }) => {
 
-    const { title, workDetails, img, _id, isComplete } = task
+    const { title, workDetails,  img, _id} = task
 
     return (
         <div className="flex flex-col max-w-md p-3 space-y-6 overflow-hidden rounded border  text-gray-900">
@@ -15,22 +15,16 @@ const MyTaskCard = ({ task, handelDelete, handelComplete }) => {
             <div className="flex flex-wrap justify-between">
                 <div className="space-x-2">
                     <button aria-label="" type="button" className="p-2 text-center text-sky-600 font-bold hover:text-sky-400">
-                        Edit
+                        Comment
                     </button>
                     <button onClick={() => handelDelete(_id)} aria-label="" type="button" className="p-2 text-red-600 font-bold hover:text-red-400">
                         delete
                     </button>
                 </div>
                 <div className="flex space-x-2 text-sm text-gray-900">
-                    {
-                        isComplete ?
-                            <button disabled>
-                                Completed
+                     <button onClick={() => handelNotComplete(_id)}>
+                                <PrimaryBtn>Not Completed</PrimaryBtn>
                             </button>
-                            : <button onClick={() => handelComplete(_id)}>
-                                <PrimaryBtn>Completed</PrimaryBtn>
-                            </button>
-                    }
 
                 </div>
             </div>
@@ -38,4 +32,4 @@ const MyTaskCard = ({ task, handelDelete, handelComplete }) => {
     );
 };
 
-export default MyTaskCard;
+export default CompleteTaskCard;
